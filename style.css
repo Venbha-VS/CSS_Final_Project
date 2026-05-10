@@ -124,3 +124,38 @@ footer {
     padding: 15px;
     font-size: 0.9rem;
 }
+/* ===============================
+   GLOBAL IMAGE FIX (Responsive)
+================================ */
+
+/* Constrain image size consistently */
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* ===============================
+   MUSIC & SERIES (Flex cleanup)
+================================ */
+
+.music-gallery img,
+.series-gallery img {
+    max-width: 280px;     /* prevents huge images */
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* ===============================
+   ART PAGE GRID (Neater layout)
+================================ */
+
+.grid {
+    grid-auto-rows: 250px;   /* uniform row heights */
+}
+
+.grid img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;       /* crops neatly without distortion */
+}
