@@ -54,7 +54,6 @@ nav a {
     border-radius: 6px;
 }
 
-/* Hover effect */
 nav a:hover {
     background-color: #ffffff;
     color: #2f6f8f;
@@ -81,7 +80,7 @@ h2 {
 }
 
 /* ===============================
-   Images — Box Model (FINAL)
+   Images — Box Model & Responsive
 ================================ */
 img {
     max-width: 100%;
@@ -107,8 +106,9 @@ img {
 
 .music-gallery img,
 .series-gallery img {
-    max-width: 280px;
-    width: 100%;
+    width: 280px;
+    height: 180px;
+    object-fit: cover;
 }
 
 /* ===============================
@@ -119,11 +119,13 @@ img {
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: 250px;
     gap: 20px;
+    align-items: stretch;
 }
 
 .grid img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 /* nth-child selector (required) */
