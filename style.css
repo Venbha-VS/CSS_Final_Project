@@ -54,7 +54,7 @@ nav a {
     border-radius: 6px;
 }
 
-/* Hover effect (required) */
+/* Hover effect */
 nav a:hover {
     background-color: #ffffff;
     color: #2f6f8f;
@@ -81,17 +81,21 @@ h2 {
 }
 
 /* ===============================
-   Images — Box Model Styling
+   Images — Box Model (FINAL)
 ================================ */
 img {
     max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
     border: 3px solid #2f6f8f;
     padding: 6px;
     border-radius: 12px;
+    object-fit: cover;
 }
 
 /* ===============================
-   Music & Series Image Sections (Flex)
+   Music & Series Sections (Flex)
 ================================ */
 .music-gallery,
 .series-gallery {
@@ -101,13 +105,25 @@ img {
     gap: 20px;
 }
 
+.music-gallery img,
+.series-gallery img {
+    max-width: 280px;
+    width: 100%;
+}
+
 /* ===============================
    Art Page — Grid Layout
 ================================ */
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 250px;
     gap: 20px;
+}
+
+.grid img {
+    width: 100%;
+    height: 100%;
 }
 
 /* nth-child selector (required) */
@@ -123,39 +139,4 @@ footer {
     text-align: center;
     padding: 15px;
     font-size: 0.9rem;
-}
-/* ===============================
-   GLOBAL IMAGE FIX (Responsive)
-================================ */
-
-/* Constrain image size consistently */
-img {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-/* ===============================
-   MUSIC & SERIES (Flex cleanup)
-================================ */
-
-.music-gallery img,
-.series-gallery img {
-    max-width: 280px;     /* prevents huge images */
-    width: 100%;
-    margin: 0 auto;
-}
-
-/* ===============================
-   ART PAGE GRID (Neater layout)
-================================ */
-
-.grid {
-    grid-auto-rows: 250px;   /* uniform row heights */
-}
-
-.grid img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;       /* crops neatly without distortion */
 }
